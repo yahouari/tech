@@ -1,0 +1,51 @@
+.main
+{
+	position: absolute;
+	left: 40%;
+	top: 20%;
+
+}
+input[type="submit"]
+{
+	background-color: green;
+	color: white;
+	border: none;
+}
+input[type="reset"]
+{
+	background-color: red;
+	color: white;
+	border: none;
+}
+body
+{
+	font-family: 'Nunito', sans-serif;
+	background:url(../ImageArticle/background.jpg);
+background-size:cover;
+background-repeat:no-repeat;
+}
+input[type="text"],textarea{
+	margin-left: 25px;
+	margin-top: 20px;
+}
+a{
+	text-decoration: none;
+	color:black;
+
+}
+a:hover
+{
+	color:white;
+	background: black;
+}
+input[type="submit"]{
+	margin-top: 15px;
+	margin-left: 100px;
+font-family: 'Nunito', sans-serif;
+}
+input[type="reset"]{
+font-family: 'Nunito', sans-serif;}
+#comment
+{
+margin-top:20px;
+}

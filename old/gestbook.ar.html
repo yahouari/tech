@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv=
+  "content-type" />
+  <title>Livre d'Or</title>
+  <link rel="stylesheet" type="text/css" href="css/gestbook.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital@1&display=swap" rel="stylesheet">
+  <!--<script type="text/javascript">
+        function traiter(maForm){
+            /* On récupère la donnée du formulaire 
+            et on les formate comme QueryString */
+            var qryStr = "nom="+maForm.nom.value+"&"+
+                      "prenom="+maForm.prenom.value+"&"+
+                      "email="+maForm.email.value+"&"+
+                      "comment="+maForm.comment.value;
+           // alert(qryStr);
+            /* on envoie au serveur pour calcul... */
+            var myXMLHttp=new XMLHttpRequest();            
+            var uri="http://yasmina.emi.ac.ma/~yelhouari/cgi-bin/guest.py"; 
+ 
+            myXMLHttp.open("POST", uri, false); 
+            myXMLHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            myXMLHttp.send(qryStr);
+
+            /* On traite la réponse */
+            if (myXMLHttp.readyState==4 && myXMLHttp.status==200){
+                document.getElementById("confirmation").innerHTML =  "Merci Mr "+maForm.prenom.value+" "+maForm.nom.value;
+            } else {
+                document.write("Err: "+myXMLHttp.readyState +
+                               " " +myXMLHttp.status);
+            }
+       }
+        </script>  -->
+</head>
+<body cz-shortcut-listen="true">
+  <div class="main">
+<h3 id="confirmation"></h3>
+  <h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">مرحبا بك في سجل الزوار الخاص بي</font></font></h1>
+
+  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">يرجى التوقيع عليه عن طريق ملء هذا النموذج.</font></font></p>
+
+  <form method="post" action="http://yasmina.emi.ac.ma/~yelhouari/cgi-bin/guest.py">
+   <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">الكنية</font></font></label>
+    <input name="nom" type="text"> <br>
+    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">الاسم الاول</font></font></label>
+     <input name="prenom" type="text"> <br>
+     <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">البريد الإلكتروني</font></font></label>
+   <input name="email" type="text"> <br>
+   <label id="comment"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">تعليق</font></font></label>
+     <br>
+    <textarea cols="40" rows="4" name="comment" maxlength="80"> </textarea><br>
+    <font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input type="submit" value="إرسال"></font></font>
+    <input type="reset" value="Annuler"><br>
+<input type="hidden" name="navigateur" id="hidden" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.106 Safari/537.36">
+<script type="text/javascript">
+var x = navigator.userAgent;
+document.getElementById("hidden").value=x;
+</script> 
+  </form>
+
+  <p><a href="guest.html"><img src="ImageArticle/back.png"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> انظر كتاب الضيف</font></font></a></p>
+<p><a href="index.ar.html"><img src="ImageArticle/home.png"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> الصفحة الرئيسية</font></font></a></p>
+</div>
+
+</body>
+</html>
